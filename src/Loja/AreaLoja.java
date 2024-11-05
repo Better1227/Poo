@@ -72,7 +72,7 @@ public class AreaLoja {
 
         ProdutosLoja produto = new ProdutosLoja(id, nome, quantidade, preco);
         gerenciamentoProduto.adicionarProduto(produto);
-        System.out.println("Produto adicionado com sucesso.");
+        System.out.println("Produto adicionado com sucesso e salvo no arquivo.");
     }
 
     private void removerProduto() {
@@ -80,7 +80,7 @@ public class AreaLoja {
         int id = scanner.nextInt();
         scanner.nextLine(); // Consumir a quebra de linha
         if (gerenciamentoProduto.removerProdutoPorId(id)) {
-            System.out.println("Produto removido com sucesso.");
+            System.out.println("Produto removido com sucesso e atualizado no arquivo.");
         } else {
             System.out.println("Produto não encontrado.");
         }
@@ -94,7 +94,7 @@ public class AreaLoja {
         scanner.nextLine(); // Consumir a quebra de linha
 
         if (gerenciamentoProduto.atualizarQuantidade(id, novaQuantidade)) {
-            System.out.println("Quantidade atualizada com sucesso.");
+            System.out.println("Quantidade atualizada com sucesso e salva no arquivo.");
         } else {
             System.out.println("Produto não encontrado.");
         }
@@ -105,15 +105,12 @@ public class AreaLoja {
     }
 
     private void exportarParaJson() {
-        String json = gerenciamentoProduto.produtosParaJson();
-        System.out.println("Produtos exportados para JSON:");
-        System.out.println(json);
+        System.out.println("Produtos já estão sendo salvos automaticamente em 'data/loja.json'.");
     }
 
     private void importarDeJson() {
-        System.out.println("Digite o JSON para importar os produtos:");
-        String json = scanner.nextLine();
-        gerenciamentoProduto.carregarProdutosDeJson(json);
+        System.out.println("Importando produtos do arquivo 'data/loja.json'...");
+        gerenciamentoProduto.carregarProdutosDeArquivo();
         System.out.println("Produtos importados com sucesso.");
     }
 }
