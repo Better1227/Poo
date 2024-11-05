@@ -13,20 +13,25 @@ public class MensalidadeAluno {
         this.dataPagamento = dataPagamento;
     }
 
+    // Getters e Setters
     public int getAlunoId() {
         return alunoId;
+    }
+
+    public void setAlunoId(int alunoId) {
+        this.alunoId = alunoId;
     }
 
     public double getValorPago() {
         return valorPago;
     }
 
-    public Date getDataPagamento() {
-        return dataPagamento;
-    }
-
     public void setValorPago(double valorPago) {
         this.valorPago = valorPago;
+    }
+
+    public Date getDataPagamento() {
+        return dataPagamento;
     }
 
     public void setDataPagamento(Date dataPagamento) {

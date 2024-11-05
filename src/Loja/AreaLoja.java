@@ -51,7 +51,7 @@ public class AreaLoja {
                     break;
                 case 7:
                     System.out.println("Saindo do sistema...");
-                    return;
+                    return ;
                 default:
                     System.out.println("Opção inválida, tente novamente.");
             }

@@ -13,20 +13,25 @@ public class PagamentoFuncionario {
         this.dataPagamento = dataPagamento;
     }
 
+    // Getters e Setters
     public int getFuncionarioId() {
         return funcionarioId;
+    }
+
+    public void setFuncionarioId(int funcionarioId) {
+        this.funcionarioId = funcionarioId;
     }
 
     public double getValorPago() {
         return valorPago;
     }
 
-    public Date getDataPagamento() {
-        return dataPagamento;
-    }
-
     public void setValorPago(double valorPago) {
         this.valorPago = valorPago;
+    }
+
+    public Date getDataPagamento() {
+        return dataPagamento;
     }
 
     public void setDataPagamento(Date dataPagamento) {
