@@ -1,12 +1,13 @@
 package projetoacademia;
 
-
+import Loja.AreaLoja;
 import Registrar_nova_Pessoa.AreaLogin;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);  
+        AreaLoja areaLoja = new AreaLoja();
        
         while (true) {            
             System.out.println("=== Academia do Vale ===");
@@ -27,7 +28,7 @@ public class Main {
 
                 case 2:
                     
-                case 3: 
+                case 3: areaLoja.iniciar();
                     
                 case 4:
                                    
