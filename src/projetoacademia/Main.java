@@ -1,5 +1,6 @@
 package projetoacademia;
 
+
 import Registrar_nova_Pessoa.AreaLogin;
 import java.util.Scanner;
 
@@ -26,7 +27,7 @@ public class Main {
 
                 case 2:
                     
-                case 3:
+                case 3: 
                     
                 case 4:
                                    
