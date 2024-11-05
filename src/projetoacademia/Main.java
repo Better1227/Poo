@@ -2,12 +2,16 @@ package projetoacademia;
 
 import Loja.AreaLoja;
 import Registrar_nova_Pessoa.AreaLogin;
+import Financeiro.AreaFinancas;
+import Financeiro.LoginFinanceiro;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);  
         AreaLoja areaLoja = new AreaLoja();
+       LoginFinanceiro loginFinanceiro = new LoginFinanceiro();
+       AreaFinancas areaFinancas = new AreaFinancas();
        
         while (true) {            
             System.out.println("=== Academia do Vale ===");
@@ -30,7 +34,7 @@ public class Main {
                     
                 case 3: areaLoja.iniciar();
                     
-                case 4:
+                case 4: areaFinancas.iniciar(loginFinanceiro);
                                    
                 case 5: 
                     System.out.println("Encerrando o sistema...");
