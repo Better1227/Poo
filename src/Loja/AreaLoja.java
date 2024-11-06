@@ -17,7 +17,9 @@ public class AreaLoja {
     }
 
     public void iniciar() {
-        while (true) {
+        boolean executando = true;
+
+        while (executando) {
             System.out.println("=== Sistema de Gerenciamento de Loja ===");
             System.out.println("1. Adicionar novo Produto");
             System.out.println("2. Remover Produto");
@@ -51,7 +53,8 @@ public class AreaLoja {
                     break;
                 case 7:
                     System.out.println("Saindo do sistema...");
-                    return ;
+                    executando = false; // Finaliza o loop
+                    break;
                 default:
                     System.out.println("Opção inválida, tente novamente.");
             }

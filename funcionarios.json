@@ -123,5 +123,12 @@
     "nome": "Davy",
     "id": 0,
     "cpf": "ID28"
+  },
+  {
+    "setor": "Instrutor",
+    "horarios": "232",
+    "nome": "joao",
+    "id": 0,
+    "cpf": "43"
   }
 ]

@@ -38,4 +38,13 @@ public class BalancoAcademia {
         System.out.println("Total Pago aos Funcionários: R$" + totalPago);
         System.out.println("Balanço da Academia: R$" + calcularBalanco());
     }
+
+    @Override
+    public String toString() {
+        return "BalancoAcademia{" +
+                "totalRecebido=R$" + totalRecebido +
+                ", totalPago=R$" + totalPago +
+                ", balanço=R$" + calcularBalanco() +
+                '}';
+    }
 }

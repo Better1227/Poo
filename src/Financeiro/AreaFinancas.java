@@ -1,5 +1,6 @@
 package Financeiro;
 
+import Pagamento.ProcessadorPagamento;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,8 +9,8 @@ public class AreaFinancas {
     private GerenciadorPagamentosFuncionarios gerenciadorPagamentosFuncionarios;
     private Scanner scanner;
 
-    public AreaFinancas() {
-        this.gerenciadorMensalidades = new GerenciadorMensalidades();
+    public AreaFinancas(ProcessadorPagamento processadorPagamento) {
+        this.gerenciadorMensalidades = new GerenciadorMensalidades(processadorPagamento);
         this.gerenciadorPagamentosFuncionarios = new GerenciadorPagamentosFuncionarios();
         this.scanner = new Scanner(System.in);
     }
@@ -41,8 +42,8 @@ public class AreaFinancas {
                 case 6 -> exibirRelatorioFinanceiroFuncionarios();
                 case 7 -> exibirBalancoAcademia();
                 case 8 -> {
-                    System.out.println("Saindo do sistema financeiro...");
-                    executando = false;
+                    System.out.println("Retornando ao menu anterior...");
+                    return; // Sai do método iniciar() e volta ao menu anterior
                 }
                 default -> System.out.println("Opção inválida, tente novamente.");
             }

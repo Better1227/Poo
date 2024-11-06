@@ -48,4 +48,13 @@ public class Pessoa {
     }
 
     
+
+@Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", id=" + id +
+                ", cpf='" + cpf + '\'' +
+                '}';
+}
 }
